@@ -1,29 +1,41 @@
 "use client"
-import { Grid, Skeleton, Container, Title, Button } from '@mantine/core';
-
-// const child = <Skeleton height={100} radius="md" animate={false} />;
+import { Grid, Container } from '@mantine/core';
+import { FlipWords } from "../../components/Home/flip-words";
+import { HoverBorderGradientDemoHome } from '../../components/Home/home-button';
+import { HoverBorderGradientDemoAbout } from '../../components/Home/about-button';
+import { HoverBorderGradientDemoExperience } from '../../components/Home/experience-button';
+import { HoverBorderGradientDemoPublications } from '../../components/Home/publications-button';
+import { BackgroundBeams } from '@/components/General/background-beams';
 
 export default function GridAsymmetrical() {
-  return (
-    <Container my="md">
-      <Grid>
-        <Grid.Col span={{ base: 12, xs: 12 }}><Title>Katherine Lee</Title></Grid.Col>
-        <Grid.Col span={{ base: 12, xs: 12 }}>    Typing out component     </Grid.Col>
-        <Grid.Col span={{ base: 12, xs: 12 }}><Skeleton height={750} radius="md" animate={true} /></Grid.Col>
-        <Grid.Col span={{ base: 12, xs: 12 }}> 
-               <Grid>
-                    <Grid.Col span={{base: 6, xs: 1.5}}><Button>Home</Button></Grid.Col>
-                    <Grid.Col span={{base: 6, xs: 1.5}}><Button>About</Button></Grid.Col>
-                    <Grid.Col span={{base: 6, xs: 1.5}}><Button>Experience</Button></Grid.Col>
-                    <Grid.Col span={{base: 6, xs: 1.5}}><Button>Publications</Button></Grid.Col>
+    const words = ["Astro", "Quantum", "Nuclear", "Computational"];
 
-               </Grid>
-        </Grid.Col>
+    return (
+        <div className="border-4 border-white m-10 box-border h-[95vh]">
+            <Container fluid>
+                <Grid>
+                    <Grid.Col span={{ base: 12, xs: 12 }}>
+                        <h1 className="text-8xl ml-2 font-bold text-white">Katherine Lee</h1>
+                    </Grid.Col>
+                    <Grid.Col span={{ base: 12, xs: 12 }}>
+                        <div className="text-5xl">
+                            <FlipWords words={words} />  
+                            <h1 className="bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-400 inline-block text-transparent bg-clip-text p-1">Physicist</h1>                    
 
-
-
-
-      </Grid>
-    </Container>
-  );
+                        </div>
+                    </Grid.Col>
+                    <Grid.Col ></Grid.Col>
+                    <Grid.Col >
+                        <Grid >
+                            <Grid.Col span={3} ><HoverBorderGradientDemoHome /></Grid.Col>
+                            <Grid.Col span={3} ><HoverBorderGradientDemoAbout /></Grid.Col>
+                            <Grid.Col span={3} ><HoverBorderGradientDemoExperience /></Grid.Col>
+                            <Grid.Col span={3} ><HoverBorderGradientDemoPublications /></Grid.Col>
+                        </Grid>
+                    </Grid.Col>
+                </Grid>
+                <BackgroundBeams />
+            </Container>
+        </div>
+    );
 }
