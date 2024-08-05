@@ -10,13 +10,22 @@ interface BackgroundEffectContextProps {
   setBackgroundEffect: (effect: BackgroundEffect) => void;
 }
 
-const BackgroundEffectContext = createContext<BackgroundEffectContextProps | undefined>(undefined);
+const BackgroundEffectContext = createContext<
+  BackgroundEffectContextProps | undefined
+>(undefined);
 
-export const BackgroundEffectProvider = ({ children }: { children: ReactNode }) => {
-  const [backgroundEffect, setBackgroundEffect] = useState<BackgroundEffect>("beams");
+export const BackgroundEffectProvider = ({
+  children,
+}: {
+  children: ReactNode;
+}) => {
+  const [backgroundEffect, setBackgroundEffect] =
+    useState<BackgroundEffect>("beams");
 
   return (
-    <BackgroundEffectContext.Provider value={{ backgroundEffect, setBackgroundEffect }}>
+    <BackgroundEffectContext.Provider
+      value={{ backgroundEffect, setBackgroundEffect }}
+    >
       {children}
     </BackgroundEffectContext.Provider>
   );
@@ -25,7 +34,9 @@ export const BackgroundEffectProvider = ({ children }: { children: ReactNode }) 
 export const useBackgroundEffect = (): BackgroundEffectContextProps => {
   const context = useContext(BackgroundEffectContext);
   if (context === undefined) {
-    throw new Error("useBackgroundEffect must be used within a BackgroundEffectProvider");
+    throw new Error(
+      "useBackgroundEffect must be used within a BackgroundEffectProvider"
+    );
   }
   return context;
 };

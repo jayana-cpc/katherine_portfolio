@@ -10,38 +10,32 @@ export function CardHoverEffect() {
 export const projects = [
   {
     title: "Poachi",
-    description:
-      "",
+    description: "",
     link: "https://stripe.com",
   },
   {
     title: "Billy Joel",
-    description:
-      "",
+    description: "",
     link: "https://netflix.com",
   },
   {
     title: "Brandy Melville",
-    description:
-      "",
+    description: "",
     link: "https://google.com",
   },
   {
     title: "Sewing",
-    description:
-      "",
+    description: "",
     link: "https://meta.com",
   },
   {
     title: "Rocketry",
-    description:
-      "",
+    description: "",
     link: "https://amazon.com",
   },
   {
     title: "Friends",
-    description:
-      "",
+    description: "",
     link: "https://microsoft.com",
   },
 ];

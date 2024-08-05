@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './CircleAnimation.module.scss';
+import React from "react";
+import styles from "./CircleAnimation.module.scss";
 
 const CircleAnimation: React.FC = () => {
   return (

@@ -1,6 +1,5 @@
-"use client";
 import React, { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { cn } from "@/app/utils/cn";
 import Image, { StaticImageData } from "next/image";
 
@@ -61,12 +60,17 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 
 const ImageComponent = ({ card }: { card: Card }) => {
   return (
-    <motion.div layoutId={`image-${card.id}-image`} className="relative h-full w-full">
+    <motion.div
+      layoutId={`image-${card.id}-image`}
+      className="relative h-full w-full"
+    >
       <Image
         src={card.thumbnail}
         layout="fill"
         objectFit="cover"
-        className={cn("object-cover object-top absolute inset-0 h-full w-full transition duration-200")}
+        className={cn(
+          "object-cover object-top absolute inset-0 h-full w-full transition duration-200"
+        )}
         alt="thumbnail"
       />
     </motion.div>

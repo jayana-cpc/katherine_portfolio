@@ -1,13 +1,11 @@
-"use client";
-import Image from "next/image";
 import React from "react";
-import { Card, Carousel } from "./AppleCardCarousel";
-import Image1 from '../../../public/vertimage1.jpg';
-import Image2 from '../../../public/vertimage2.jpg';
-import Image3 from '../../../public/vertimage3.jpg';
-import Image4 from '../../../public/vertimage4.jpg';
-import Image5 from '../../../public/vertimage5.jpg';
-import Image6 from '../../../public/vertimage6.jpg';
+import { Card, Carousel } from "./card-carousel";
+import Image1 from "../../../public/vertimage1.jpg";
+import Image2 from "../../../public/vertimage2.jpg";
+import Image3 from "../../../public/vertimage3.jpg";
+import Image4 from "../../../public/vertimage4.jpg";
+import Image5 from "../../../public/vertimage5.jpg";
+import Image6 from "../../../public/vertimage6.jpg";
 
 export function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (

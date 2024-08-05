@@ -60,7 +60,7 @@ export const BackgroundBeams = React.memo(
       "M-359 230C-359 230 -291 635 173 762C637 889 705 1294 705 1294",
       "M-352 240C-352 240 -284 645 180 772C644 899 712 1304 712 1304",
       "M-345 250C-345 250 -277 655 187 782C651 909 719 1314 719 1314",
-      ];
+    ];
     return (
       <div
         className={cn(
@@ -123,17 +123,25 @@ export const BackgroundBeams = React.memo(
               </motion.linearGradient>
             ))}
 
-              <radialGradient
-                id="paint0_radial_242_278"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(352 34) rotate(90) scale(555 1560.62)"
-              >
-                <stop offset="0" stopColor="var(--neutral-300)" stopOpacity="1"></stop>
-                <stop offset="1" stopColor="var(--neutral-300)" stopOpacity="1"></stop>
-              </radialGradient>
+            <radialGradient
+              id="paint0_radial_242_278"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(352 34) rotate(90) scale(555 1560.62)"
+            >
+              <stop
+                offset="0"
+                stopColor="var(--neutral-300)"
+                stopOpacity="1"
+              ></stop>
+              <stop
+                offset="1"
+                stopColor="var(--neutral-300)"
+                stopOpacity="1"
+              ></stop>
+            </radialGradient>
           </defs>
         </svg>
       </div>

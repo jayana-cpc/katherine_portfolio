@@ -1,4 +1,3 @@
-"use client";
 import { cn } from "@/app/utils/cn";
 import React, {
   useState,
@@ -100,7 +99,8 @@ export const StarsBackground: React.FC<StarsBackgroundProps> = ({
     }
 
     return () => {
-      if (currentRef) { // Use the copied ref value in the cleanup
+      if (currentRef) {
+        // Use the copied ref value in the cleanup
         resizeObserver.unobserve(currentRef);
       }
     };

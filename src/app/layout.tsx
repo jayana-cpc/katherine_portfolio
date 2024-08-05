@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import '@mantine/core/styles.css';
-import { ColorSchemeScript, MantineProvider } from '@mantine/core';
+import "@mantine/core/styles.css";
+import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import { BackgroundEffectProvider } from "@/context/BackgroundEffectContext";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +22,9 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body>
-        <MantineProvider defaultColorScheme="dark" ><BackgroundEffectProvider>{children}</BackgroundEffectProvider></MantineProvider>
+        <MantineProvider defaultColorScheme="dark">
+          <BackgroundEffectProvider>{children}</BackgroundEffectProvider>
+        </MantineProvider>
       </body>
     </html>
   );

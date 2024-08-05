@@ -1,14 +1,12 @@
-// app/about/page.tsx
 "use client";
 
 import { Grid, Container, Radio, Space } from "@mantine/core";
 import { BackgroundBeams } from "@/components/General/background-beams";
 import ShootingStars from "@/components/General/shooting-stars";
 import { StarsBackground } from "@/components/General/stars-background";
-import { InfiniteMovingCards } from "@/components/About/SpotifyCarousel";
+import { InfiniteMovingCards } from "@/components/About/spotify-carousel";
 import { useBackgroundEffect } from "@/context/BackgroundEffectContext";
 import Buttons from "@/components/General/buttons";
-// import { LayoutGridDemo } from "@/components/About/FullGrid";
 
 const songs = [
   {
@@ -54,22 +52,43 @@ export default function GridAsymmetrical() {
             <Space h="lg" />
             <Grid.Col span={{ base: 12, xs: 12 }}>
               <div className="text-3xl ml-2 pr-10 font-bold text-white hover:glow">
-                Interests: <i>nuclear physics, intergalactic medium, stellar evolution, autonomy in science, & more.</i>
+                Interests:{" "}
+                <i>
+                  nuclear physics, intergalactic medium, stellar evolution,
+                  autonomy in science, & more.
+                </i>
               </div>
             </Grid.Col>
             <Grid.Col span={{ base: 12, xs: 12 }}>
               <div className="text-3xl ml-2 pr-10 font-bold text-white hover:glow">
-                Status: <i>neutral hydrogen QSO (astro)physics researcher @ UF, investigating super-massive black hole properties & m-sigma relationship w/ quasars, democratizing physics</i>
+                Status:{" "}
+                <i>
+                  neutral hydrogen QSO (astro)physics researcher @ UF,
+                  investigating super-massive black hole properties & m-sigma
+                  relationship w/ quasars, democratizing physics
+                </i>
               </div>
             </Grid.Col>
             <Grid.Col span={{ base: 12, xs: 12 }}>
               <div className="text-3xl ml-2 pr-10 font-bold text-white hover:glow">
-                Hobbies: <i>astrophotography + stacking, high-powered rocket design + launch, hiking + eating</i>
+                Hobbies:{" "}
+                <i>
+                  astrophotography + stacking, high-powered rocket design +
+                  launch, hiking + eating
+                </i>
               </div>
             </Grid.Col>
             <Grid.Col span={{ base: 12, xs: 12 }}>
               <div className="text-3xl ml-2 pr-10 font-bold text-white hover:glow">
-                Best Reads: <i>The Internet Con: How to Seize the Means of Computation (Cory Doctorow); Patriarchy of the Wage (Silvia Federici); Lessons in Chemistry (Bonnie Garmus); How Europe Underdeveloped Africa (Walter Rodney); Einstein&apos;s Dice and Schrödinger&apos;s Cat: How Two Great Minds Battled Quantum Randomness to Create a Unified Theory of Physics (Paul Halpern)</i>
+                Best Reads:{" "}
+                <i>
+                  The Internet Con: How to Seize the Means of Computation (Cory
+                  Doctorow); Patriarchy of the Wage (Silvia Federici); Lessons
+                  in Chemistry (Bonnie Garmus); How Europe Underdeveloped Africa
+                  (Walter Rodney); Einstein&apos;s Dice and Schrödinger&apos;s
+                  Cat: How Two Great Minds Battled Quantum Randomness to Create
+                  a Unified Theory of Physics (Paul Halpern)
+                </i>
               </div>
             </Grid.Col>
             <Grid.Col span={{ base: 12, xs: 12 }}>
@@ -77,25 +96,30 @@ export default function GridAsymmetrical() {
                 Favorite Songs:
               </div>
               <div className="h-[152] rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden">
-                <InfiniteMovingCards items={songs} direction="right" speed="slow" />
+                <InfiniteMovingCards
+                  items={songs}
+                  direction="right"
+                  speed="slow"
+                />
               </div>
             </Grid.Col>
-            <Grid.Col span={{ base: 12, xs: 12 }} style={{paddingTop: "50px"}}>
+            <Grid.Col
+              span={{ base: 12, xs: 12 }}
+              style={{ paddingTop: "50px" }}
+            >
               <div className="text-4xl ml-2 pr-10 font-bold text-white hover:glow">
                 Contact Me!
               </div>
             </Grid.Col>
-            <Grid.Col span={{ base: 12, xs: 12 }} >
+            <Grid.Col span={{ base: 12, xs: 12 }}>
               <div className="text-3xl ml-2 pr-10 font-bold text-white hover:glow">
                 kalee7798@gmail.com
               </div>
             </Grid.Col>
             {/* <LayoutGridDemo /> */}
-            <Grid.Col>
-            </Grid.Col>
-            
+            <Grid.Col></Grid.Col>
           </Grid>
-          <div >
+          <div>
             <Buttons />
           </div>
         </Container>
@@ -107,10 +131,20 @@ export default function GridAsymmetrical() {
       >
         <Grid>
           <Grid.Col span={6}>
-            <Radio value="beams" label="Beams" color="violet" variant="outline" />
+            <Radio
+              value="beams"
+              label="Beams"
+              color="violet"
+              variant="outline"
+            />
           </Grid.Col>
           <Grid.Col span={6}>
-            <Radio value="stars" label="Stars" color="violet" variant="outline" />
+            <Radio
+              value="stars"
+              label="Stars"
+              color="violet"
+              variant="outline"
+            />
           </Grid.Col>
         </Grid>
       </Radio.Group>

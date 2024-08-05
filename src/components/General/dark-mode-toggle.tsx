@@ -1,15 +1,13 @@
-// components/DarkModeToggle.tsx
-"use client"
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const DarkModeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     if (isDarkMode) {
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
     }
   }, [isDarkMode]);
 
@@ -19,7 +17,7 @@ const DarkModeToggle = () => {
 
   return (
     <button onClick={toggleDarkMode}>
-      {isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+      {isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
     </button>
   );
 };
