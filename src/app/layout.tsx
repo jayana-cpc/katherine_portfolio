@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import '@mantine/core/styles.css';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
-import DarkModeToggle from "../components/General/DarkModeToggle";
+import { BackgroundEffectProvider } from "@/context/BackgroundEffectContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body>
-        <MantineProvider defaultColorScheme="dark" >{children}</MantineProvider>
+        <MantineProvider defaultColorScheme="dark" ><BackgroundEffectProvider>{children}</BackgroundEffectProvider></MantineProvider>
       </body>
     </html>
   );
