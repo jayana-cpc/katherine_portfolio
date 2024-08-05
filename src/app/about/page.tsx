@@ -33,7 +33,7 @@ export default function GridAsymmetrical() {
 
   return (
     <div>
-      <div className="relative border-4 border-white m-10 box-border h-[100vh]">
+      <div className="relative border-4 border-white m-10 box-border ">
         {backgroundEffect === "beams" && <BackgroundBeams />}
         {backgroundEffect === "stars" && (
           <>
@@ -95,7 +95,7 @@ export default function GridAsymmetrical() {
             </Grid.Col>
             
           </Grid>
-          <div style={{ marginTop: "10px" }}>
+          <div >
             <Buttons />
           </div>
         </Container>

@@ -20,7 +20,7 @@ export default function GridAsymmetrical() {
 
   return (
     <div>
-      <div className="relative border-4 border-white m-10 box-border h-[95vh]">
+      <div className="relative border-4 border-white m-10 box-border ">
         {backgroundEffect === "beams" && <BackgroundBeams />}
         {backgroundEffect === "stars" && (
           <>
@@ -70,10 +70,15 @@ export default function GridAsymmetrical() {
             <Grid.Col span={{ base: 12, xs: 12 }} style={{ marginTop: '-150px' }}>
               <CircleAnimation />
             </Grid.Col>
+            <Grid.Col style={{height: "200px"}}>
+
+            </Grid.Col>
+
+            <Grid.Col>
+              <Buttons />
+            </Grid.Col>
           </Grid>
-          <div style={{ marginTop: '300px' }}>
-            <Buttons />
-          </div >               
+                       
         </Container >
       </div >
       <Radio.Group value={backgroundEffect} onChange={(value) => setBackgroundEffect(value as "beams" | "stars")} style={{ display: 'flex', marginTop: '-33px', marginLeft: '50px' }}>
